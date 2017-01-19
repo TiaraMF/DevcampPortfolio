@@ -32,12 +32,13 @@ class PortfoliosController < ApplicationController
 
   def update
     @portfolio_item = Portfolio.find(params[:id])
+
     if @portfolio_item.update(portfolio_params)
-      redirect_to @portfolio_item
+      redirect_to @portfolios_item
     else
       render :edit
+    end
   end
-end
 
   def destroy
     @portfolio_item = Portfolio.find(params[:id])
