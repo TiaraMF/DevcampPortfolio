@@ -1,0 +1,10 @@
+/* line 5, /Users/tiarafowers/Bootcamp/DevcampPortfolio/app/assets/stylesheets/portfolios.scss */
+body {
+  background-color: black;
+  color: white;
+}
+
+/* line 10, /Users/tiarafowers/Bootcamp/DevcampPortfolio/app/assets/stylesheets/portfolios.scss */
+.top a {
+  color: red;
+}
