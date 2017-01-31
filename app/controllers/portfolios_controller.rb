@@ -1,5 +1,5 @@
 class PortfoliosController < ApplicationController
-  before_action :set_portfolio_item, only: [:edit, :show, :update, :destroy]
+  before_action :set_portfolio_item, only: [:edit, :show, :update, :destroy,]
   layout 'portfolio'
   access all: [:show, :index, :angular], user: {except: [:destroy, :new, :create, :update, :edit, :sort]}, site_admin: :all
 
@@ -21,13 +21,12 @@ end
 
   def new
     @portfolio_item = Portfolio.new
-    3.times { @portfolio_item.technologies.build }
   end
 
   def create
     @portfolio_item = Portfolio.new(portfolio_params)
     if @portfolio_item.save
-      redirect_to show_portfolio_path(@portfolio_item)
+      redirect_to show_portfolio_path(@portfolio_item), notice: 'Your portfolio item is now live.'
     else
       render :new
     end
@@ -43,7 +42,7 @@ end
 
   def update
     if @portfolio_item.update(portfolio_params)
-      redirect_to show_portfolio_path(@portfolio_item)
+      redirect_to show_portfolio_path(@portfolio_item), notice: 'The record successfuly updated.'
     else
       render :edit
     end
@@ -62,7 +61,7 @@ end
                                       :body, 
                                       :main_image, 
                                       :thumb_image,
-                                      technologies_attributes: [:name]
+                                      technologies_attributes: [:id, :name, :_destroy]
                                       )
   end
 
