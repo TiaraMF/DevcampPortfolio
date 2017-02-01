@@ -18,6 +18,6 @@ Bundler.require(*Rails.groups)
 
 module DevcampPortfolio
   class Application < Rails::Application
-    config.assets.paths << "#{Rails.root}/app/assets/videos"
+    config.eager_load_paths << "#{Rails.root}/lib"
   end
 end
