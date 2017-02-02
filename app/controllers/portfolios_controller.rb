@@ -25,10 +25,13 @@ end
 
   def create
     @portfolio_item = Portfolio.new(portfolio_params)
-    if @portfolio_item.save
-      redirect_to show_portfolio_path(@portfolio_item), notice: 'Your portfolio item is now live.'
-    else
-      render :new
+
+    respond_to do |format|
+      if @portfolio_item.save
+        format.html { redirect_to show_portfolio_path(@portfolio_item), notice: 'Your portfolio item is now live.' }
+      else
+        format.html { render :new }
+      end
     end
   end
   
