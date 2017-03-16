@@ -14,13 +14,13 @@ a:hover {
 }
 
 /* Custom default button */
-.btn-secondary,
-.btn-secondary:hover,
-.btn-secondary:focus {
-  color: #333;
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:focus {
+  color: black;
   text-shadow: none; /* Prevent inheritance from `body` */
-  background-color: #44D7A8;
-  border: .05rem solid #44D7A8;
+  background-color: white;
+  border: .05rem solid white;
 }
 
 
@@ -31,14 +31,20 @@ a:hover {
 html,
 body {
   height: 100%;
-  font-family: 'Lato', sans-serif;
-  font-size: 20px;
+  font-family: "brandon-grotesque",sans-serif;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 800;
 }
 body {
-  color: #FFF;
-  font-size: 20px;
+  color: white;
+  font-size: 17px;
   text-align: center;
-  text-shadow: #FFF;
+  text-shadow: white;
+}
+body h1 {
+  font-size: 52px;
 }
 
 h1, .h1,
@@ -47,7 +53,7 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6,{
-  font-family: 'Roboto Slab', serif;
+  font-family: "Wheat-Regular",sans-serif;
 }
 
 
@@ -63,6 +69,7 @@ h6, .h6,{
 .site-wrapper-inner {
   display: table-cell;
   vertical-align: top;
+  background-image: #background;
 }
 .cover-container {
   margin-right: auto;
@@ -81,7 +88,7 @@ h6, .h6,{
 
 .masthead-brand {
   margin-bottom: 0;
-  color: #44D7A8;
+  color: white;
 }
 
 .nav-masthead .nav-link {
@@ -109,7 +116,9 @@ h6, .h6,{
 @media (min-width: 48em) {
   .masthead-brand {
     float: left;
-    font-size: 38px;
+    font-family: "WheatRough-Regular", sans-serif;
+    font-size: 53px;
+    letter-spacing: 3px;
   }
   .nav-masthead {
     float: right;
@@ -148,6 +157,7 @@ h6, .h6,{
   .masthead {
     position: fixed;
     top: 0;
+    background: opacity 0.5em gray;
   }
   .mastfoot {
     position: fixed;
@@ -201,38 +211,21 @@ h6, .h6,{
 .app-nav span {
   margin-left: 15px;
   margin-right: 15px;
+  padding-bottom: 20px;
 }
 
 #background {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -100;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-  background: image-url('home_bg.png') no-repeat;
-  background-size: cover;
+  background: url(background-brick-wall.jpg) no-repeat center center fixed;
+  background-size: 2200px 1400px;
+  -webkit-background-size: 2200px 1400px;
+  -moz-background-size: 2200px 1400px;
 }
 
 .app-footer {
   color: white;
-}
+  font-size: 13px;
+  text-align: center;
 
-.tech-news {
-  color: black;
-  margin: 20px;
-}
-
-.tech-news a {
-  color: green;
-}
-
-.tech-news > .card {
-  padding: 30px;
 }
 
 .app-card-container {
@@ -256,4 +249,13 @@ h6, .h6,{
 .skill {
   margin-top: 10px;
   margin-bottom: 10px;
+}
+.container {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+.profile_img {
+  padding-top: 90px;
+  margin-left: 20px;
 }

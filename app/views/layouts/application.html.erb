@@ -17,16 +17,10 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body id="background">
     <div class="site-wrapper">
       <div class="site-wrapper-inner">
         <div class="cover-container">
-
-          <%= image_tag(
-              'background-brick-wall.jpg',
-              id: 'background',
-            )
-            %>
 
           <%= render "shared/application_nav" %>
 

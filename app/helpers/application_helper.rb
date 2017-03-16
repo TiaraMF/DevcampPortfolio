@@ -27,20 +27,16 @@ module ApplicationHelper
         title: 'Home'
       },
       {
-        url: about_me_path,
-        title: 'About Me'
-      },
-      {
-        url: contact_path,
-        title: 'Contact'
-      },
-      {
         url: blogs_path,
         title: 'Blogs'
       },
       {
         url: portfolios_path,
         title: 'Portfolio'
+      },
+      {
+        url: 'http://www.github.com/tiaramf',
+        title: '/tiaramf'
       },
     ]
   end
